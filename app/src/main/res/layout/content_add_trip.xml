@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.github.aniketc.android.ui.trips.AddTripActivity"
+    tools:showIn="@layout/activity_add_trip">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/lyTripName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="15dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etTripName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Trip Name"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </android.support.design.widget.TextInputLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTripType"
+            android:textSize="18sp"
+            android:text="Trip Type"
+            android:gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/card_view" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hsv"
+            android:layout_below="@+id/tvTripType">
+
+        </HorizontalScrollView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hsv"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/lyBeginDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+           >
+
+            <AutoCompleteTextView
+                android:id="@+id/etBeginDate"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="Begin Date"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/lyBeginDate">
+
+            <AutoCompleteTextView
+                android:id="@+id/etEndDate"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="End Date"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
